@@ -1,0 +1,16 @@
+/config/database.yml
+/db/*.db
+/db/*.sqlite3
+/db/schema.rb
+/files/*
+/log/*.log*
+
+/.bundle
+/Gemfile.lock
+/Gemfile.local
+
+.*~
+.ruby-gemset
+.ruby-version
+
+

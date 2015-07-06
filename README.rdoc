@@ -1,0 +1,23 @@
+= Redmine Metrics
+
+https://github.com/hassox/warden/wiki/Setup
+
+https://github.com/hassox/warden/wiki/Setup
+
+http://sinatraruby.ru/
+
+http://www.slideshare.net/search/slideshow?searchfrom=header&q=sinatra+warden&ud=any&ft=all&lang=**&sort=
+
+http://www.slideshare.net/tonywok/demystifying-warden?qid=0df61a7f-5353-4111-a43e-2b52ac5dc03f&v=default&b=&from_search=1
+
+Generate Secrete Key for App
+  rake generate_secret_key
+
+DB migrate (create account_base.db in app directory)
+  rake db:migrate
+
+Create User
+  rake create:user USER_EMAIL=admin@admin.com PASSWORD=admin USERNAME=admin
+
+
+rackup -p 4567
