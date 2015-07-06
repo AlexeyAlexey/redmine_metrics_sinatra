@@ -13,4 +13,6 @@
 .ruby-gemset
 .ruby-version
 
+*.db
+
 
