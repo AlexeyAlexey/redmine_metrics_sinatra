@@ -1,6 +1,0 @@
-adapter:  mysql2
-database: redmine_development
-host:     localhost
-username: redmine
-password: ""
-encoding: utf8

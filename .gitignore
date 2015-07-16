@@ -1,5 +1,5 @@
 /config/database.yml
-/config/data_base_metrics.yml
+/config/database_metrics.yml
 /config/app_secret_key.rb
 /db/*.db
 /db/*.sqlite3
@@ -16,5 +16,6 @@
 .ruby-version
 
 *.db
+*.sqlite3
 
 
