@@ -1,0 +1,6 @@
+adapter:  mysql2
+database: redmine_metrics
+host:     localhost
+username: root
+password: ""
+encoding: utf8
