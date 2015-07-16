@@ -6,7 +6,6 @@ end
 
 class User < AccountBase
   self.table_name = 'users'
-  #SECRET_KEY = "3b5ada303cf85efaf9e6dc70277468d8b9c24fda9180ad9f82e5d7250b35d82084d64257649b0ec7"
 
   before_create :generate_salt_hash_password
 

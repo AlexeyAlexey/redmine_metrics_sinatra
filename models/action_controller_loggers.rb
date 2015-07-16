@@ -1,7 +1,7 @@
 class RedmineMetricsDb < ActiveRecord::Base
   self.abstract_class = true
-  establish_connection(YAML::load(File.open('config/database_redmine_metrics.yml')))
-  logger = Logger.new(File.open('log/database.log', 'w'))
+  establish_connection(YAML::load(File.open('config/database_metrics.yml')))
+  logger = Logger.new(File.open('log/database_metrics.log', 'w'))
 end
 
 class ActionControllerLoggers < RedmineMetricsDb
