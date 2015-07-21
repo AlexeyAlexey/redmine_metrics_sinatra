@@ -1,12 +1,13 @@
 //%link{href: "/stylesheets/line_chart.css", rel: "stylesheet"}
 //%script{src: "/javascripts/line_chart.js", charset: "utf-8"}
--@select_all.each do |record|
-  %p= record[1]
-%svg
+%div{:style => "height: 320px;"}
+  -@select_all.each do |record|
+    %p= record[1]
 
-#chart_bar
-%br
-%a{ :id =>"chart_bar", :style => "cursor: pointer;"} Chart Bar
+#statuses_chart_bar
+  #chart_bar
+  %br
+  %a{ :id =>"chart_bar", :style => "cursor: pointer;"} Chart Bar
 :javascript
 %script{:type=>"text/javascript"}
   //<![CDATA[
@@ -15,6 +16,10 @@
        
     var chart_bar = c3.generate({
       bindto: '#chart_bar',
+      size: {
+        height: 240,
+        width:  240
+      },
       data: {
              columns: [
                ['100', 0],

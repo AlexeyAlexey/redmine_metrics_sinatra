@@ -14,7 +14,7 @@ class RedmineMetrics < Sinatra::Base
      end
      #ActionControllerLoggers.all
      #SELECT * FROM tbl LIMIT 5,10;  # Retrieve rows 6-15
-     @select_all = RedmineMetricsDb.connection.execute("SELECT * FROM action_controller_#{300}_loggers LIMIT #{0}, #{10}")
+     @select_all = RedmineMetricsDb.connection.execute("SELECT * FROM action_controller_#{200}_loggers LIMIT #{0}, #{10}")
      @user_current = env['warden'].user
 	   haml :'charts/index', layout: :application
    end
