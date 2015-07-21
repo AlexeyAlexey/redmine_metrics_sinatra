@@ -1,64 +1,36 @@
 //%link{href: "/stylesheets/line_chart.css", rel: "stylesheet"}
 //%script{src: "/javascripts/line_chart.js", charset: "utf-8"}
-%h2 user curren
-%h3= @user_current.username
-
 -@select_all.each do |record|
   %p= record[1]
 %svg
 
 #chart_bar
-<br>
-<a id="chart_bar">Chart Bar</a>
+%br
+%a{ :id =>"chart_bar", :style => "cursor: pointer;"} Chart Bar
 :javascript
 %script{:type=>"text/javascript"}
   //<![CDATA[
   $(document).ready( function() {
 
-    
-
-    i = 1;
-    chart = c3.generate({
-      bindto: '#chart',
-      data: {
-        columns: [
-            ['data1', 30, 200, 100, 400, 150, 250]
-          ],
-        duration: 5000
-        }
-    });
-    chart.flow({
-        columns: [
-            ['data1', 35, 250, 500, 800, 900, 1000]
-          ],
-        duration: 5000
-      });
-
-    setInterval(second_passed, 5000)
-    
-    
-    function second_passed(){
-      i += 1;
-      chart.flow({
-        columns: [
-            ['data1', 30 + i, 200 + i, 100 + i, 400 +i, 150 + i, 250]
-          ],
-        duration: 5000
-      });
-
-    }
-
+       
     var chart_bar = c3.generate({
       bindto: '#chart_bar',
       data: {
              columns: [
                ['100', 0],
-               ['200', 30],
-               ['300', 40],
-               ['400', 10],
-               ['500', 1],
+               ['200', 0],
+               ['300', 0],
+               ['400', 0],
+               ['500', 0],
               ],
-             type: 'bar'
+             type: 'bar',
+             colors: {
+                100: '#001EFF',
+                200: '#006633',
+                300: '#FFFF00',
+                400: '#FFA600',
+                500: '#D80000' 
+             },
       },
       bar: {
             width: {

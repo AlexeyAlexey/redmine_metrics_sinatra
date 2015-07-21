@@ -8,9 +8,6 @@
     %link{href: "/stylesheets/signin.css", rel: "stylesheet"}
     %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-2.1.0.min.js"}
     %script{src: "/javascripts/d3.js", charset: "utf-8"}
-    
-    %link{href: "https://cdn.rawgit.com/shutterstock/rickshaw/master/rickshaw.css", rel: "stylesheet"}
-    %script{src: "https://cdn.rawgit.com/shutterstock/rickshaw/master/rickshaw.js"}
 
     %link{href: "https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.css", rel: "stylesheet"}
     %script{src: "https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.js"}
@@ -30,7 +27,9 @@
         %div{ :id => "navbar", :class => "navbar-collapse collapse"}
           %ul{:class => "nav navbar-nav navbar-right"}
             %li
-              %a{:href => "#"} Dashboard
+              %a{:href => "#"} 
+                Current User: 
+                =@user_current.email
             %li
               %a{:href => "#"} Settings
             %li
